@@ -64,6 +64,110 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Layercraft3D – Druk 3D</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffaa;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    button {
+      padding: 8px 14px;
+      background: #00ffaa;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00cc88;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Layercraft3D – Druk 3D na zamówienie</h1>
+
+  <h2>Oferta</h2>
+
+  <table>
+    <tr>
+      <th>Produkt</th>
+      <th>Cena</th>
+      <th>Zamów</th>
+    </tr>
+    <tr>
+      <td>Keyrambit</td>
+      <td>5 zł</td>
+      <td>
+        <button onclick="ustawProdukt('Keyrambit')">Zamów</button>
+      </td>
+    </tr>
+  </table>
+
+  <h2 id="zamowienie">Zamów wydruk 3D</h2>
+
+  <form>
+    <label>Produkt</label>
+    <input type="text" id="produkt" name="produkt" readonly>
+
+    <label>Ilość</label>
+    <input type="number" name="ilosc" min="1" value="1">
+
+    <label>Twój email</label>
+    <input type="email" name="email" required>
+
+    <label>Uwagi</label>
+    <textarea name="uwagi"></textarea>
+
+    <button type="submit">Wyślij</button>
+  </form>
+
+  <script>
+    function ustawProdukt(nazwa) {
+      document.getElementById("produkt").value = nazwa;
+      location.href = "#zamowienie";
+    }
+  </script>
+
+</body>
+</html>
+
+
 
 
 
